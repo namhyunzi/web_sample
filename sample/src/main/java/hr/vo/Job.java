@@ -1,6 +1,7 @@
 package hr.vo;
 
 public class Job {
+	
 	private String id;
 	private String title;
 	private int minSalary;
@@ -33,6 +34,11 @@ public class Job {
 	public void setMaxSalary(int maxSalary) {
 		this.maxSalary = maxSalary;
 	}
-	
 
+
+	@Override
+	public String toString() {
+		return "Job [id=" + id + ", title=" + title + ", minSalary=" + minSalary + ", maxSalary=" + maxSalary + "]";
+	}
+	
 }

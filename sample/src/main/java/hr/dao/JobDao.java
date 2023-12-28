@@ -6,6 +6,20 @@ import helper.JdbcTemplate;
 import hr.vo.Job;
 
 public class JobDao {
+	
+	public void insertJob(Job job) {
+		String sql="""
+			insert into jobs
+			(job_id, job_title, min_salary, max_salary)
+			values
+			(?,?,?,?)
+				""";
+		
+		JdbcTemplate.insert(sql,job.getId(),
+								job.getTitle(),
+								job.getMinSalary(),
+								job.getMaxSalary());
+	}
 
 	public List<Job> getAllJobs() {
 		String sql = """
@@ -16,7 +30,6 @@ public class JobDao {
 		
 		return JdbcTemplate.selectList(sql, rs -> {
 			Job job = new Job();
-			
 			job.setId(rs.getString("job_id"));
 			job.setTitle(rs.getString("job_title"));
 			job.setMinSalary(rs.getInt("min_salary"));
@@ -26,7 +39,7 @@ public class JobDao {
 		});
 	}
 	
-	public Job getJobById(String id) {
+	public Job getJobById(String jobId) {
 		String sql = """
 			select *
 			from jobs
@@ -42,6 +55,6 @@ public class JobDao {
 			job.setMaxSalary(rs.getInt("max_salary"));
 			
 			return job;
-		}, id);
+		}, jobId);
 	}
 }
