@@ -1,4 +1,4 @@
-<%@page import="dao.LoginUser"%>
+<%@page import="dto.LoginUser"%>
 <%@page import="org.apache.commons.codec.digest.DigestUtils"%>
 <%@page import="vo.User"%>
 <%@page import="dao.UserDao"%>

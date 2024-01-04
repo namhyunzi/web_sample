@@ -1,6 +1,6 @@
 <%@page import="vo.User"%>
 <%@page import="dao.UserDao"%>
-<%@page import="dao.LoginUser"%>
+<%@page import="dto.LoginUser"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
