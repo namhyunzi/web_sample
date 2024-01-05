@@ -18,7 +18,7 @@ public class UserDao {
 	 * @throws SQLException 
 	 */
 	public void insertUser(User user) throws SQLException {
-		ibatis.insert("insertUser", user);
+		ibatis.insert("users.insertUser", user);
 	}
 	
 	/**
@@ -28,7 +28,7 @@ public class UserDao {
 	 * @throws SQLException
 	 */
 	public User getUserById(String id) throws SQLException {
-		User user = (User) ibatis.queryForObject("getUserById", id);
+		User user = (User) ibatis.queryForObject("users.getUserById", id);
 		return user;
 	}
 	
@@ -39,7 +39,7 @@ public class UserDao {
 	 * @throws SQLException
 	 */
 	public User getUserByEmail(String email) throws SQLException {
-		User user = (User) ibatis.queryForObject("getUserByEmail", email);
+		User user = (User) ibatis.queryForObject("users.getUserByEmail", email);
 		return user;
 		
 	}

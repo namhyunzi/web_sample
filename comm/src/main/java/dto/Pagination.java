@@ -115,4 +115,12 @@ public class Pagination {
 	public boolean isLast() {
 		return isLast;
 	}
+	@Override
+	public String toString() {
+		return "Pagination [rows=" + rows + ", pages=" + pages + ", totalRows=" + totalRows + ", totalPages="
+				+ totalPages + ", totalBlocks=" + totalBlocks + ", currentPage=" + currentPage + ", currentBlock="
+				+ currentBlock + ", begin=" + begin + ", end=" + end + ", beginPage=" + beginPage + ", endPage="
+				+ endPage + ", isFirst=" + isFirst + ", isLast=" + isLast + "]";
+	}
+	
 }
