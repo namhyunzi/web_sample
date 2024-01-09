@@ -4,8 +4,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class DateUtils {
-	
-	private static SimpleDateFormat Date_FORMAT= new SimpleDateFormat("yyyy년 M월 d일");
+
+	private static SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy년 M월 d일");
 	
 	/**
 	 * 날짜를 전달받아서 "2024년 1월 21"과 같은 형식의 문자열로 반환한다.
@@ -17,7 +17,6 @@ public class DateUtils {
 			return "";
 		}
 		
-		return Date_FORMAT.format(date);
+		return DATE_FORMAT.format(date);
 	}
-
 }

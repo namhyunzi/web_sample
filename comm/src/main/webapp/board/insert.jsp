@@ -5,21 +5,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-	LoginUser loginUser = (LoginUser)session.getAttribute("LOGIN_USER");
+	LoginUser loginUser = (LoginUser) session.getAttribute("LOGIN_USER");
 	if (loginUser == null) {
-		response.sendRedirect("../loginform?jsp?error=deny");
+		response.sendRedirect("../loginform.jsp?error=deny");
 		return;
 	}
 	
 	/*
 		요청 URL
-			localhost/comm/board/insert,jsp
+			localhost/comm/board/insert.jsp
 		요청 파라미터
 			title=xxx&content=xxx
-			*요청메세지의 바디부
+			* 요청메세지의 바디부
 	*/
 	
-	// 1. 요청파라미터값을 조회한다.
+	// 1. 요청파라미터 값을 조회한다.
 	String title = request.getParameter("title");
 	String content = request.getParameter("content");
 	
@@ -31,9 +31,9 @@
 	board.setContent(content);
 	
 	// 4. User객체를 생성해서 사용자번호를 담고 Board객체에 저장한다.
-	User user= new User();
+	User user = new User();
 	user.setNo(loginUser.getNo());
-
+	
 	board.setUser(user);
 	
 	// 5. COMM_BOARDS 테이블에 대한 CRUD 작업이 구현된 BoardDao객체를 생성한다.
@@ -45,3 +45,16 @@
 	// 7. 게시글 목록을 요청하는 list.jsp를 재요청하게 하는 응답을 보낸다.
 	response.sendRedirect("list.jsp");
 %>
+
+
+
+
+
+
+
+
+
+
+
+
+

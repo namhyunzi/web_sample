@@ -5,7 +5,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-
+	
 	/*
 		요청 URL
 			localhost/comm/login.jsp
@@ -21,8 +21,8 @@
 	// 2. COMM_USERS 테이블에 대한 CRUD 기능이 구현된 UserDao객체를 생성한다.
 	UserDao userDao = new UserDao();
 	
-	// 3. UserDao객체의 getUserById(String id)를 실행해서 아이디에 해당하는 
-	// 사용자 정보를 조회한다.
+	// 3. UserDao객체의 getUserById(String id)를 실행해서 아이디에 해당하는
+	//    사용자정보를 조회한다.
 	User savedUser = userDao.getUserById(id);
 	
 	// 4. 아이디에 해당하는 사용자정보가 존재하는지 체크한다.
@@ -44,7 +44,7 @@
 		return;
 	}
 	
-	// 7. 사용자 인증작업이 완료된 사용자 정보를 세션객체에 속성으로 저장한다.
+	// 7. 사용자 인증작업이 완료된 사용자정보를 세션객체에 속성으로 저장한다.
 	LoginUser loginUser = new LoginUser();
 	loginUser.setNo(savedUser.getNo());
 	loginUser.setId(savedUser.getId());
@@ -52,6 +52,18 @@
 	
 	session.setAttribute("LOGIN_USER", loginUser);
 	
-	// 8. Index.jsp를 재요청하는 응답을 보낸다.
+	// 8. index.jsp를 재요청하는 응답을 보낸다.
 	response.sendRedirect("index.jsp");
+	
 %>
+
+
+
+
+
+
+
+
+
+
+

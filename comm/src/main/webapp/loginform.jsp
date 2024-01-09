@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" ></script>
 <title>커뮤니티::로그인폼</title>
 </head>
 <body>
@@ -19,8 +19,8 @@
 			<h1>로그인 폼</h1>
 <%
 	/*
-		요청 URL 
-			+ 로그인 메뉴를 클릭해서 요청할 때 
+		요청 URL
+			+ 로그인 메뉴를 클릭해서 요청할 때
 				localhost/comm/loginform.jsp
 			+ 로그인 실패로 재요청할 때
 				localhost/comm/loginform.jsp?error=xxx
@@ -35,7 +35,7 @@
 %>
 
 <%
-	if ("fail".equals(error)) {	
+	if ("fail".equals(error)) {
 %>
 			<div class="alert alert-danger">
 				<strong>로그인 실패</strong> 아이디 혹은 비밀번호가 올바르지 않습니다.
@@ -55,7 +55,6 @@
 <%
 	}
 %>
-			
 			<form class="border bg-light p-3" method="post" action="login.jsp">
 				<div class="form-group mb-3">
 					<label class="form-label">아이디</label>
@@ -75,3 +74,10 @@
 </div>
 </body>
 </html>
+
+
+
+
+
+
+

@@ -2,18 +2,20 @@ package vo;
 
 import java.util.Date;
 
-public class Board {
+public class Todo {
 
 	private int no;
+	private TodoCategory category;
 	private String title;
 	private User user;
+	private String expectedDate;
 	private String content;
-	private int replyCnt;
+	private String status;
 	private String deleted;
 	private Date updatedDate;
 	private Date createdDate;
 	
-	public Board() {}
+	public Todo() {}
 
 	public int getNo() {
 		return no;
@@ -21,6 +23,14 @@ public class Board {
 
 	public void setNo(int no) {
 		this.no = no;
+	}
+
+	public TodoCategory getCategory() {
+		return category;
+	}
+
+	public void setCategory(TodoCategory category) {
+		this.category = category;
 	}
 
 	public String getTitle() {
@@ -39,6 +49,14 @@ public class Board {
 		this.user = user;
 	}
 
+	public String getExpectedDate() {
+		return expectedDate;
+	}
+
+	public void setExpectedDate(String expectedDate) {
+		this.expectedDate = expectedDate;
+	}
+
 	public String getContent() {
 		return content;
 	}
@@ -47,12 +65,12 @@ public class Board {
 		this.content = content;
 	}
 
-	public int getReplyCnt() {
-		return replyCnt;
+	public String getStatus() {
+		return status;
 	}
 
-	public void setReplyCnt(int replyCnt) {
-		this.replyCnt = replyCnt;
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 	public String getDeleted() {
@@ -81,9 +99,9 @@ public class Board {
 
 	@Override
 	public String toString() {
-		return "Board [no=" + no + ", title=" + title + ", user=" + user + ", content=" + content + ", replyCnt="
-				+ replyCnt + ", deleted=" + deleted + ", updatedDate=" + updatedDate + ", createdDate=" + createdDate
-				+ "]";
+		return "Todo [no=" + no + ", category=" + category + ", title=" + title + ", user=" + user + ", expectedDate="
+				+ expectedDate + ", content=" + content + ", status=" + status + ", deleted=" + deleted
+				+ ", updatedDate=" + updatedDate + ", createdDate=" + createdDate + "]";
 	}
 	
 }

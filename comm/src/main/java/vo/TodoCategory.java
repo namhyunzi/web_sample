@@ -1,12 +1,11 @@
-package dto;
+package vo;
 
-public class LoginUser {
+public class TodoCategory {
 
 	private int no;
-	private String id;
 	private String name;
 	
-	public LoginUser() {}
+	public TodoCategory() {}
 
 	public int getNo() {
 		return no;
@@ -14,14 +13,6 @@ public class LoginUser {
 
 	public void setNo(int no) {
 		this.no = no;
-	}
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
 	}
 
 	public String getName() {

@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" ></script>
 <title>커뮤니티</title>
 </head>
 <body>
@@ -15,10 +15,9 @@
 		+ JSP 액션태그다.
 		+ 지정된 JSP 페이지를 이 JSP에 포함시킨다.
 		+ <jsp:param />태그를 포함할 수 있다.
-	
  --%>
 <jsp:include page="include/navbar.jsp">
-	<jsp:param name="menu" value="home" />
+	<jsp:param name="menu" value="home"/>
 </jsp:include>
 <div class="container">
 	<div class="row">

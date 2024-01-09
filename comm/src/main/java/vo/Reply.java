@@ -2,18 +2,17 @@ package vo;
 
 import java.util.Date;
 
-public class Board {
+public class Reply {
 
 	private int no;
-	private String title;
+	private Board board;
 	private User user;
 	private String content;
-	private int replyCnt;
 	private String deleted;
 	private Date updatedDate;
 	private Date createdDate;
 	
-	public Board() {}
+	public Reply() {}
 
 	public int getNo() {
 		return no;
@@ -23,12 +22,12 @@ public class Board {
 		this.no = no;
 	}
 
-	public String getTitle() {
-		return title;
+	public Board getBoard() {
+		return board;
 	}
 
-	public void setTitle(String title) {
-		this.title = title;
+	public void setBoard(Board board) {
+		this.board = board;
 	}
 
 	public User getUser() {
@@ -45,14 +44,6 @@ public class Board {
 
 	public void setContent(String content) {
 		this.content = content;
-	}
-
-	public int getReplyCnt() {
-		return replyCnt;
-	}
-
-	public void setReplyCnt(int replyCnt) {
-		this.replyCnt = replyCnt;
 	}
 
 	public String getDeleted() {
@@ -81,9 +72,9 @@ public class Board {
 
 	@Override
 	public String toString() {
-		return "Board [no=" + no + ", title=" + title + ", user=" + user + ", content=" + content + ", replyCnt="
-				+ replyCnt + ", deleted=" + deleted + ", updatedDate=" + updatedDate + ", createdDate=" + createdDate
-				+ "]";
+		return "Reply [no=" + no + ", board=" + board + ", user=" + user + ", content=" + content + ", deleted="
+				+ deleted + ", updatedDate=" + updatedDate + ", createdDate=" + createdDate + "]";
 	}
+	
 	
 }
