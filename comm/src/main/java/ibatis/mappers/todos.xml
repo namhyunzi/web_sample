@@ -20,7 +20,7 @@
 	</select>
 	
 	<select id="getTodos" parameterClass="map" resultClass="vo.Todo">
-	SELECT A.todo_no as no, A.cagegory_no as "category.no", b.category_name as "category.name", 
+	SELECT A.todo_no as no, A.category_no as "category.no", b.category_name as "category.name", 
 		   A.TODO_TITLE as title, A.TODO_EXPECTED_DATE as expectedDate, A.TODO_STATUS as status, A.TODO_CREATED_DATE as createdDate
 	FROM( SELECT
    				 ROW_NUMBER() OVER (ORDER BY TODO_NO DESC) NUM,

@@ -5,7 +5,7 @@
 	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
 	
 <sqlMap namespace="todo-categories">
-	<select id = "getCategoires" resultClass="vo.TodoCategory">
+	<select id = "getAllCategoires" resultClass="vo.TodoCategory">
 		select
 			category_no 	as no,
 			category_name 	as name

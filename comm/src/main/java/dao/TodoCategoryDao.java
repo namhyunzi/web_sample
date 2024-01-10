@@ -14,7 +14,7 @@ public class TodoCategoryDao {
 	
 	@SuppressWarnings("unchecked")
 	public List<TodoCategory> getAllCategories () throws SQLException {
-		return (List<TodoCategory>) ibatis.queryForList("todo-categories.getCategoires");
+		return (List<TodoCategory>) ibatis.queryForList("todo-categories.getAllCategoires");
 	}
 }
 
